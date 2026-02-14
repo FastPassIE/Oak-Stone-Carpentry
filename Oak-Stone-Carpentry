@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Carpentry Services Dublin | Oak & Stone Carpentry</title>
+    <meta name="description" content="Oak & Stone Carpentry offers high-end bespoke carpentry services in Dublin. Blending modern design with traditional woodworking expertise for homeowners, developers, and designers.">
+    <meta property="og:title" content="Premium Carpentry Services Dublin | Oak & Stone Carpentry">
+    <meta property="og:description" content="High-end bespoke carpentry in Dublin. Blending modern design with traditional craftsmanship.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/your-repo-name/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1C1C1C;
+            --secondary-color: #C6A75E;
+            --accent-color: #F5F5F5;
+            --text-color: #333333;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 3rem; }
+        h3 { font-size: 1.75rem; margin-bottom: 1rem; }
+
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-light {
+            background-color: var(--accent-color);
+        }
+
+        .section-dark {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+        .section-dark h2, .section-dark h3 {
+            color: #fff;
+        }
+
+        a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+            background-color: var(--secondary-color);
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Header & Navigation */
+        .main-header {
+            background: rgba(28, 28, 28, 0.98);
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .logo:hover {
+            color: var(--secondary-color);
+            background: none;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .main-nav a {
+            color: #fff;
+            font-weight: 500;
+            font-family: var(--font-body);
+            transition: color 0.3s ease;
+        }
+        .main-nav a:hover {
+            color: var(--secondary-color);
+            background: none;
+        }
+
+        /* Mobile Menu */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: #fff;
+            text-align: center;
+            padding: 15rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-content h1 {
+            color: #fff;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem auto;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 2px solid var(--secondary-color);
+        }
+        .btn:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+        }
+        .btn-light {
+            background-color: transparent;
+            color: #fff;
+            border-color: #fff;
+        }
+        .btn-light:hover {
+            background-color: #fff;
+            color: var(--primary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image img {
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .about-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+        .service-card {
+            background: #fff;
+            padding: 2.5rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .service-card .icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        .service-card h3 {
+            color: var(--primary-color);
+        }
+
+        /* Why Choose Us Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            text-align: center;
+        }
+        .feature-item .icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        .feature-item h3 {
+            color: #fff;
+        }
+        .feature-item p {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Testimonials Section */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-card h4 {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .testimonial-card .location {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            font-family: var(--font-body);
+        }
+        .star-rating {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .faq-item {
+            background: #fff;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-question .icon {
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active .icon {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+        }
+        
+        /* CTA Section */
+        .cta-content {
+            text-align: center;
+        }
+        .cta-content h2 {
+            margin-bottom: 1.5rem;
+        }
+        .cta-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        /* Contact Section */
+        .contact-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        .main-footer {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        .social-links a {
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: var(--secondary-color);
+            background: none;
+        }
+        .footer-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            
+            .menu-toggle { display: block; }
+            .main-nav {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+            .main-nav.active {
+                display: flex;
+            }
+            .main-nav ul {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            .hero { padding: 10rem 0; }
+            .hero-content h1 { font-size: 3rem; }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+            .services-grid,
+            .features-grid,
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#hero" class="logo">Oak & Stone</a>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Dublin's Bespoke Carpentry Crafted for You</h1>
+                    <p>Where modern design meets timeless craftsmanship. Transforming Dublin homes and commercial spaces with premium, bespoke woodwork.</p>
+                    <a href="#contact" class="btn">Request a Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-light">
+            <div class="container">
+                <h2>The Oak & Stone Story</h2>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" alt="Carpenter at work in a Dublin workshop">
+                    </div>
+                    <div class="about-text">
+                        <p>Nestled in the heart of Dublin, Oak & Stone Carpentry was founded on a simple principle: to create woodwork that is as enduring as it is beautiful. Our passion lies in blending the rich heritage of traditional Irish carpentry with sleek, contemporary design.</p>
+                        <p>From our initial consultation to the final polish, every project is a collaborative journey. We listen intently to your vision, offering expert guidance to ensure the final product not only meets but exceeds your expectations. Our commitment is to quality, precision, and a finish that speaks for itself.</p>
+                        <p>We are proud to serve Dublin's discerning homeowners, innovative property developers, and leading interior designers who share our appreciation for exceptional craftsmanship.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <h2>Our Premium Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-couch"></i></div>
+                        <h3>Bespoke Furniture</h3>
+                        <p>One-of-a-kind pieces handcrafted to your exact specifications. From dining tables that become family heirlooms to custom media units, we build furniture that defines your space.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-kitchen-set"></i></div>
+                        <h3>Custom Kitchens</h3>
+                        <p>The heart of the home, designed perfectly. We design, build, and install stunning, bespoke kitchens that combine flawless functionality with breathtaking aesthetics, tailored for your Dublin home.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-door-closed"></i></div>
+                        <h3>Staircases & Doors</h3>
+                        <p>Make a lasting impression. We craft beautiful, solid wood staircases and custom interior doors that serve as stunning architectural features, enhancing the character and value of your property.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-store"></i></div>
+                        <h3>Commercial Fit-Outs</h3>
+                        <p>Elevate your brand with sophisticated commercial carpentry. We specialise in high-end retail interiors, office fit-outs, bars, and reception desks that impress clients and inspire employees.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="icon"><i class="fas fa-magic"></i></div>
+                        <h3>Restoration & Repair</h3>
+                        <p>Breathe new life into cherished pieces. Our expert restoration services sensitively repair and revive antique furniture and architectural woodwork, preserving their story for generations to come.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us Section -->
+        <section id="why-us" class="section-dark">
+            <div class="container">
+                <h2>The Oak & Stone Difference</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-award"></i></div>
+                        <h3>Master Craftsmen</h3>
+                        <p>Our team is comprised of highly skilled, time-served carpenters with a passion for perfection and an eye for detail.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-drafting-compass"></i></div>
+                        <h3>Bespoke Design</h3>
+                        <p>We don't do off-the-shelf. Every piece is meticulously designed and crafted to be a unique reflection of your style and space.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Premium Materials</h3>
+                        <p>We source only the finest, sustainably-harvested timber and premium materials, ensuring unparalleled quality and durability.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="icon"><i class="fas fa-handshake"></i></div>
+                        <h3>Dublin Focused</h3>
+                        <p>As Dublin specialists, we understand the local architectural styles and client needs, delivering a truly personalised and efficient service.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section-light">
+            <div class="container">
+                <h2>Voices from Our Valued Clients</h2>
+                <div class="testimonials-container">
+                    <div class="testimonial-card">
+                        <div class="star-rating">★★★★★</div>
+                        <p>"Oak & Stone transformed our kitchen in Ranelagh. The craftsmanship is absolutely flawless, and the team was a pleasure to deal with. It's the best investment we've made in our home. Highly recommended!"</p>
+                        <h4>Aisling O'Brien</h4>
+                        <p class="location">Ranelagh, Dublin 6</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="star-rating">★★★★★</div>
+                        <p>"We hired Oak & Stone for a full commercial fit-out of our new bar in Drumcondra. They delivered a stunning, high-quality finish on time and on budget. True professionals."</p>
+                        <h4>Mark Fitzgerald</h4>
+                        <p class="location">Fitzgerald & Co., Drumcondra</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="star-rating">★★★★★</div>
+                        <p>"I needed a custom bookcase built into an awkward alcove. The design they proposed was ingenious, and the execution is perfect. It looks like it was always part of the house. Fantastic work."</p>
+                        <h4>Clara Byrne</h4>
+                        <p class="location">Clontarf, Dublin 3</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section-dark">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Do you service all areas of Dublin?</span><i class="fas fa-plus icon"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes, we are proud to serve all of Dublin, from Dublin City Centre (D1, D2) to the surrounding counties including South Dublin (D4, D6, D14, D16, D18, D22, D24), West Dublin (D10, D11, D12, D15, D20), and North Dublin (D3, D5, D7, D9, D13). Contact us to discuss your project location.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>How does the design and quotation process work?</span><i class="fas fa-plus icon"></i></button>
+                        <div class="faq-answer">
+                            <p>Our process begins with a no-obligation consultation at your home or site to understand your vision and requirements. We then develop design concepts and provide a detailed, transparent quotation. We only proceed once you are completely happy with the plan and price.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>What type of materials do you use?</span><i class="fas fa-plus icon"></i></button>
+                        <div class="faq-answer">
+                            <p>We believe in quality from the ground up. We use a range of premium, sustainably-sourced timbers, including European Oak, American Walnut, Maple, and Cherry, as well as high-quality MDF and veneers for painted finishes. We will always recommend the best material for your specific project and budget.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Do you offer a warranty on your work?</span><i class="fas fa-plus icon"></i></button>
+                        <div class="faq-answer">
+                            <p>Absolutely. We stand by the quality of our craftsmanship. All of our bespoke carpentry comes with a comprehensive 5-year warranty on workmanship and materials, giving you complete peace of mind.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question"><span>Can you work with my interior designer?</span><i class="fas fa-plus icon"></i></button>
+                        <div class="faq-answer">
+                            <p>Yes, we frequently collaborate with interior designers and architects across Dublin. We are experienced in working from technical drawings and specifications to bring a shared creative vision to life, ensuring a seamless and successful project.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section id="cta" class="section-light">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Craft Your Dream Space?</h2>
+                    <p>Let's discuss how Oak & Stone Carpentry can bring your vision to life with unparalleled quality and design. Schedule your free, no-obligation consultation today.</p>
+                    <a href="#contact" class="btn">Get Your Free Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-form-container">
+                    <form name="contact" method="POST" data-netlify="true">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Tell us about your project</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer section-dark">
+        <div class="container">
+            <div class="social-links">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+            <div class="footer-info">
+                <p>&copy; 2024 Oak & Stone Carpentry. All Rights Reserved.</p>
+                <p>Serving Dublin, Ireland | <a href="mailto:hello@oakandstone.ie">hello@oakandstone.ie</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mainNav = document.getElementById('main-nav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainNav.classList.remove('active');
+            });
+        });
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                // Toggle active class on the clicked question
+                question.classList.toggle('active');
+                
+                // Get the answer element
+                const answer = question.nextElementSibling;
+                
+                // Toggle max-height for smooth animation
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
