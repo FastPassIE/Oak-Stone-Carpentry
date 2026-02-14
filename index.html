@@ -694,22 +694,37 @@
             });
         });
 
-        // FAQ Accordion
+        // FAQ Accordion — FIXED
         const faqQuestions = document.querySelectorAll('.faq-question');
 
         faqQuestions.forEach(question => {
             question.addEventListener('click', () => {
                 // Toggle active class on the clicked question
                 question.classList.toggle('active');
-                
+
                 // Get the answer element
                 const answer = question.nextElementSibling;
-                
+
                 // Toggle max-height for smooth animation
                 if (answer.style.maxHeight) {
                     answer.style.maxHeight = null;
+                    answer.style.paddingTop = null;
+                    answer.style.paddingBottom = null;
                 } else {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    // Force layout to calculate scrollHeight
+                    answer.style.maxHeight = '0';
+                    answer.style.paddingTop = '0';
+                    answer.style.paddingBottom = '0';
+                    answer.style.display = 'block';
+                    
+                    // Trigger reflow
+                    answer.offsetHeight;
+                    
+                    // Set to actual height
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.paddingTop = '1.5rem';
+                    answer.style.paddingBottom = '1.5rem';
+                    answer.style.display = 'block';
                 }
             });
         });
